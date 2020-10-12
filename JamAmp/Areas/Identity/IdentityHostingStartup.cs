@@ -18,9 +18,6 @@ namespace JamAmp.Areas.Identity
                 services.AddDbContext<JamAmpDbContext>(options =>
                     options.UseSqlServer(
                         context.Configuration.GetConnectionString("JamAmpDbContextConnection")));
-
-                services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                    .AddEntityFrameworkStores<JamAmpDbContext>();
             });
         }
     }
