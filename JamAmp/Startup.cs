@@ -30,7 +30,7 @@ namespace JamAmp
         {
             services.AddDbContext<JamAmpDbContext>(options => 
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>(IdentityHelper.SetIdentityOptions);
+            services.AddDefaultIdentity<IdentityUser>(IdentityHelper.SetIdentityOptions).AddEntityFrameworkStores<JamAmpDbContext>();
             services.AddControllersWithViews();
             services.AddRazorPages();
         }
@@ -43,6 +43,7 @@ namespace JamAmp
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseDatabaseErrorPage();
             }
             else
             {
@@ -55,6 +56,7 @@ namespace JamAmp
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
@@ -62,6 +64,7 @@ namespace JamAmp
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapRazorPages();
             });
         }
     }
