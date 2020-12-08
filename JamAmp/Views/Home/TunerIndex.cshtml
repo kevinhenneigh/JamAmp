@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewData["Title"] = "TunerIndex";
+}
+
+
+
+
+<head>
+    <link href="~/css/TunerCss/site.css" rel="stylesheet">
+    <link href="~/css/TunerCss/site.css" rel="stylesheet">
+
+    <script type="text/javascript" src="/js/TunerJS/onlinetuner.min.js"></script>
+    <script type="text/javascript">
+        function start() {
+
+            //create viewer
+            var views = [
+                new OnlineTuner.Controller.GuitareTuner(new OnlineTuner.Widget.CircleWidget(OnlineTuner.$('tunerView'), '#ffffff', '#2c3e50', '#18bc9c', '#2c3e50'))
+            ];
+
+            //install analyser
+            var analyser = new OnlineTuner.Analyser(views);
+
+            analyser.install(function () {
+                console.log("let's go");
+            }, function (e) {
+                OnlineTuner.$('error').style.display = 'inline';
+                OnlineTuner.$('message').innerHTML = e;
+            });
+        }
+    </script>
+</head>
+
+<body id="page-top" class="index" onload="start()">
+
+    <canvas width="300" height="300" id="tunerView"></canvas>
+
+</body>
+
+
+
+

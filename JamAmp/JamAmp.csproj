@@ -5,6 +5,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="wwwroot\AmpComponents\bower_components\polymer\.bower.json" />
+    <Content Include="wwwroot\AmpComponents\bower_components\polymer\bower.json" />
+    <Content Include="wwwroot\AmpComponents\bower_components\polymer\LICENSE.txt" />
+    <Content Include="wwwroot\AmpComponents\bower_components\polymer\polymer-micro.html" />
+    <Content Include="wwwroot\AmpComponents\bower_components\polymer\polymer-mini.html" />
+    <Content Include="wwwroot\AmpComponents\bower_components\polymer\polymer.html" />
+    <Content Include="wwwroot\AmpComponents\bower_components\webcomponentsjs\.bower.json" />
+    <Content Include="wwwroot\AmpComponents\bower_components\webcomponentsjs\bower.json" />
+    <Content Include="wwwroot\AmpComponents\bower_components\webcomponentsjs\package.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.8" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.8" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.8" />
@@ -14,6 +26,24 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\AmpComponents\bower_components\polymer\build.log" />
+    <None Include="wwwroot\AmpComponents\bower_components\webcomponentsjs\build.log" />
+    <None Include="wwwroot\AmpComponents\bower_components\webcomponentsjs\CustomElements.js" />
+    <None Include="wwwroot\AmpComponents\bower_components\webcomponentsjs\CustomElements.min.js" />
+    <None Include="wwwroot\AmpComponents\bower_components\webcomponentsjs\HTMLImports.js" />
+    <None Include="wwwroot\AmpComponents\bower_components\webcomponentsjs\HTMLImports.min.js" />
+    <None Include="wwwroot\AmpComponents\bower_components\webcomponentsjs\MutationObserver.js" />
+    <None Include="wwwroot\AmpComponents\bower_components\webcomponentsjs\MutationObserver.min.js" />
+    <None Include="wwwroot\AmpComponents\bower_components\webcomponentsjs\README.md" />
+    <None Include="wwwroot\AmpComponents\bower_components\webcomponentsjs\ShadowDOM.js" />
+    <None Include="wwwroot\AmpComponents\bower_components\webcomponentsjs\ShadowDOM.min.js" />
+    <None Include="wwwroot\AmpComponents\bower_components\webcomponentsjs\webcomponents-lite.js" />
+    <None Include="wwwroot\AmpComponents\bower_components\webcomponentsjs\webcomponents-lite.min.js" />
+    <None Include="wwwroot\AmpComponents\bower_components\webcomponentsjs\webcomponents.js" />
+    <None Include="wwwroot\AmpComponents\bower_components\webcomponentsjs\webcomponents.min.js" />
   </ItemGroup>
 
 </Project>
